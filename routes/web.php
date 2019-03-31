@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/','MahasiswaController@list');
 Route::get('/register','MahasiswaController@index');
 Route::post('/register/add-mahasiswa','MahasiswaController@store');
+
+Route::get('/mahasiswa/{id}/edit','MahasiswaController@edit');
+Route::post('/mahasiswa/{id}/update', 'MahasiswaController@update');
+Route::get('/mahasiswa/{id}/delete','MahasiswaController@destroy');

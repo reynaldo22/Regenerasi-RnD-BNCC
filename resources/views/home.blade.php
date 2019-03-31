@@ -139,15 +139,15 @@ tbody:hover tr:hover td {
     </tr>
   </thead>
   <tbody>
-    <tr>
-        @foreach($data as $d)
+	@foreach($data as $d)
+    <tr>        
         <td>{{$d->nama}}</td>
         <td>{{$d->nim}}</td>
         <td>{{$d->umur}}</td>
         <td>{{$d->phone}}</td>
-        <td><a href="">Edit</a> | <a href="">Delete</a></td>
-        @endforeach
-    </tr>
+		<td><a href="{{'/mahasiswa/'.$d->id.'/edit'}}">Edit</a> | <a href="{{'/mahasiswa/'.$d->id.'/delete'}}">Delete</a></td>
+	</tr>
+	@endforeach
   </tbody>
 </table>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
